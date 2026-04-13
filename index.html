@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Super Mario — Move Move (Canvas)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <div id="gameContainer">
+    <!-- El elemento canvas donde dibujaremos el juego -->
+    <canvas id="gameCanvas" width="900" height="600">
+      Tu navegador no soporta HTML5 Canvas.
+    </canvas>
+
+    <!-- Pantalla de Inicio -->
+    <div id="startOverlay" class="overlay visible">
+      <div class="panel">
+        <h1>Super Mario — Move Move</h1>
+        <p>Muévete con las <b>Flechas</b> o <b>WASD</b>.<br>Salta con <b>Espacio</b>.</p>
+        <p>También puedes usar los botones en pantalla.</p>
+        <button id="startBtn">Iniciar Juego</button>
+      </div>
+    </div>
+
+    <!-- Pantalla de Game Over -->
+    <div id="gameOverOverlay" class="overlay">
+      <div class="panel">
+        <h1>¡Game Over!</h1>
+        <p>Mario no lo ha conseguido...</p>
+        <button id="restartBtn">Reintentar</button>
+      </div>
+    </div>
+
+    <!-- Pantalla de Victoria -->
+    <div id="victoryOverlay" class="overlay">
+      <div class="panel">
+        <h1>¡Nivel Completado!</h1>
+        <p>Has rescatado a la Princesa Peach.</p>
+        <button id="victoryRestartBtn">Jugar de Nuevo</button>
+      </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loadingOverlay" class="overlay visible">
+      <div class="panel">
+        <h2>Cargando recursos...</h2>
+      </div>
+    </div>
+
+    <!-- Controles táctiles -->
+    <div id="touchControls" aria-hidden="true">
+      <button id="leftBtn" class="touchBtn">◀</button>
+      <button id="rightBtn" class="touchBtn">▶</button>
+      <button id="jumpBtn" class="touchBtn jump">O</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
